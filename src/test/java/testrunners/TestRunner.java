@@ -1,14 +1,14 @@
 package testrunners;
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(
-        features = "src/test/resources/features",
-        glue = "stepdefinition/",
-        plugin = {"pretty", "html:target/cucumber-reports"},
-        tags = "@sauceLabDemo"
+@CucumberOptions(features = "src/test/resources/features", glue = "stepdefinition", plugin = {"pretty", "html:target/cucumber-reports"}, monochrome = true, tags = "@sauceLabDemo"
+
 )
-public class TestRunner {
-    // This is the JUnit 4 version of the test runner
+
+public class TestRunner extends AbstractTestNGCucumberTests {
+
+
 }
 
